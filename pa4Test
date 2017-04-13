@@ -1,0 +1,66 @@
+class Driver {
+	public static void main(String[] args)
+	{
+        d_to_b(257683);
+    }
+    
+    public static void d_to_b(int d_num)
+    {
+    	int length = 0;
+    	int d_num_copy = d_num;
+    	while(d_num_copy > 0)
+    	{
+    		d_num_copy = d_num_copy / 2;
+    		length = length + 1;
+    	}
+    	
+    	int[] b_array = new int[length];
+    	int count = 0;
+    	while(d_num > 0)
+    	{
+    		if(d_num - (d_num / 2) - (d_num / 2) == 0)
+    		{
+    		    b_array[count] = 0;
+    		}
+    		
+    		else
+    		{
+    			b_array[count] = 1;
+    		}
+    		
+    		d_num  = d_num / 2;
+    		count = count+1;
+    	}
+    	
+    	int i = length -1;
+    	while ( i >= 0)
+    	{
+    		System.out.println(b_array[i]);
+    		i = i-1;
+    	}
+    	
+    	//The following code computes the actual binary number. Doesn't work for denary integers 100+
+    	//
+    	//int result = 0;
+    	//int degree = length - 1;
+    	//int i = length - 1;
+    	
+    	//while (i >= 0)
+    	//{
+    	//	int j = degree;
+    	//	int multiplier = 1;
+    	//	
+    	//	while(j > 0)
+    	//	{
+    	//		multiplier = multiplier * 10;
+    	//		j = j-1;
+    	//	}
+    	//	
+    	//	result = result + multiplier * b_array[i];
+    	///	i = i - 1;
+    	//	degree = degree - 1;
+    	//}
+    	
+    	//System.out.println(result);
+    }
+}
