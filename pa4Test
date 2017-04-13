@@ -39,8 +39,9 @@ class Driver {
     		i = i-1;
     	}
     	
-    	//The following code computes the actual binary number. Doesn't work for denary integers 100+
-    	//
+    	//The following code computes and prints the binary number all at once. Doesn't work for denary integers 128+ because of 
+    	//int size restriction in mJAM
+	//
     	//int result = 0;
     	//int degree = length - 1;
     	//int i = length - 1;
