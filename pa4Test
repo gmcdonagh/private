@@ -1,9 +1,7 @@
-class Driver 
-{
-    public static void main(String[] args)
-    {
-        //Change this argument to any denary number
-	d_to_b(257683);
+class Driver {
+	public static void main(String[] args)
+	{
+        d_to_b(45);
     }
     
     public static void d_to_b(int d_num)
@@ -27,43 +25,47 @@ class Driver
     		
     		else
     		{
-    		    b_array[count] = 1;
+    			b_array[count] = 1;
     		}
     		
     		d_num  = d_num / 2;
     		count = count+1;
     	}
     	
+    	//This code prints out each digit of the binary number one at a time from left to right. Use for large denary numbers.
+    	
+    	/*
     	int i = length -1;
     	while ( i >= 0)
     	{
     		System.out.println(b_array[i]);
     		i = i-1;
     	}
+    	*/
     	
-    	//The following code computes and prints the binary number all at once. Doesn't work for denary integers 128+ because of 
-    	//int size restriction in mJAM
-	//
-    	//int result = 0;
-    	//int degree = length - 1;
-    	//int i = length - 1;
-    	//
-    	//while (i >= 0)
-    	//{
-    	//	int j = degree;
-    	//	int multiplier = 1;
-    	//	
-    	//	while(j > 0)
-    	//	{
-    	//		multiplier = multiplier * 10;
-    	//		j = j-1;
-    	//	}
-    	//	
-    	//	result = result + multiplier * b_array[i];
-    	///	i = i - 1;
-    	//	degree = degree - 1;
-    	//}
-    	//
-    	//System.out.println(result);
+    	//This code prints the whole binary number all at once. Doesn't work for large denary numbers.
+    	
+    	int result = 0;
+    	int degree = length - 1;
+    	int i = length - 1;
+    	
+    	while (i >= 0)
+    	{
+    		int j = degree;
+    		int multiplier = 1;
+    		
+    		while(j > 0)
+    		{
+    			multiplier = multiplier * 10;
+    			j = j-1;
+    		}
+    		
+    		result = result + multiplier * b_array[i];
+    		i = i - 1;
+    		degree = degree - 1;
+    	}
+    	
+    	System.out.println(result);
+    	
     }
 }
