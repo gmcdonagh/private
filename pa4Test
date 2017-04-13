@@ -1,6 +1,7 @@
-class Driver {
-	public static void main(String[] args)
-	{
+class Driver 
+{
+    public static void main(String[] args)
+    {
         d_to_b(45);
     }
     
